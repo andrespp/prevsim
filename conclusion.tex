@@ -1,18 +1,69 @@
-\begin{frame}
-  \begin{block}{}
+\begin{frame}{Ofensores}
+  \begin{block}{$P()$}
     \begin{itemize}
-      \item
+      \item Dados agregados no AEPS
+      \item Projeção do IBGE não distingue clientela
+      \item Dificuldade no cálculo de $Ps()$
+    \end{itemize}
+  \end{block}
+  \begin{block}{$Eb()$ para todos os anos da série histórica}
+    \begin{itemize}
+      \item Microdados possuem estoque em 2016
+      \begin{itemize}
+        \item Microdados não possuem a data de cessação de benefícios cessados
+        \item Não é possível o cálculo do estoque em anos anteriores
+      \end{itemize}
     \end{itemize}
   \end{block}
 \end{frame}
 
-%\begin{frame}
-%  \begin{block}{}
-%    \begin{itemize}
-%      \item
-%    \end{itemize}
-%  \end{block}
-%\end{frame}
+\begin{frame}
+  \begin{block}{Objetivos}
+    \begin{itemize}
+      \item Reproduzir o modelo de projeção oficial utilizando os microdados
+      \begin{itemize}
+        \item Ratificar o grau de incerteza obtido nos dados agregados
+        \item \alert{Novas propostas de reforma}
+      \end{itemize}
+      \item \alert{Simular a reforma da previdência com os dados históricos}
+      \item Propor um novo modelo de projeção de longo prazo para a previdência
+      social no Brasil
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Próximos passos}
+  \begin{block}{$P()$}
+    \begin{itemize}
+      \item Projeção da população brasileira separada por:
+      \begin{itemize}
+         \item Ano (2010 a 2060)
+         \item Idade
+         \item Sexo
+         \item Clientela (Rural/Urbana)
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+  \begin{block}{Nova proposta de reforma}
+    \begin{itemize}
+      \item Maximar estoque de contribuintes
+      \scriptsize
+          \begin{center}
+          $\sum_i \sum_s \sum_c C(i,t,s,c) =$ \\
+           $\sum_i \sum_s \sum_c P(i,t,s,c) \times Part(i,t,s,c) \times [1-Desemp(i,t,s,c)] \times d(i,t,s,c)$
+          \end{center}
+     \item Variando:
+      \begin{itemize}
+          \scriptsize
+          \item $Part$   %é a taxa de participação na força de trabalho
+          \item $Desemp$ %é a taxa de desemprego
+          \item $d$ %é a densidade da contribuição (proporção de meses de
+            %contribuição do empregado no ano, onde $d=1$ significa 12 meses de
+            %contribuição
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 %\begin{frame}
 %  \begin{block}{}
