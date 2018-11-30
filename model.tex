@@ -3,6 +3,95 @@
 \end{frame}
 
 \begin{frame}{Bases de dados}
+  \begin{block}{Base de dados da previdência}
+    \begin{itemize}
+      \item Disponibilizado no site \alert{\underline{\url{https://legis.senado.leg.br}}}
+      \item Dados relacionados a benefícios (\alert{aposentadorias} e \alert{pensões}) concedidos pelo RGPS no período de 1995-2016
+      \item Dois documentos disponibilizados
+      \begin{itemize}
+        \item Doc090/Mídia018 e Doc097/Mídia019
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+    
+  \begin{block}{Pré-processamento dos dados}
+    \begin{itemize}
+      \item Utilização da ferramenta \alert{Pentaho Data Integration} para a organização do banco de dados
+      \item Modelo de \alert{Data Warehouse} empregado na modelagem
+      \item Utilização de um servidor local PostgreSQL 
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Origem dos Dados}
+  \begin{figure}[h]
+  	\begin{center}
+      \includegraphics [scale=0.48]{./Figures/table1}
+     % \caption {Estimativa de dispositivos conectados à Internet.}
+  		%\label{fig:arq-imuno}
+  	\end{center}
+  \end{figure}
+  
+  \begin{block}{}
+    \begin{itemize}
+      \item Análise da tabela \alert{fato\_auxilio/DOC097}
+      \item Contém as informações relevantes e necessárias para a proposta em questão
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{}
+    \begin{itemize}
+      \item \alert{14 variáveis} relacionadas aos beneficiarios
+      \begin{itemize}
+        \item Informações pessoais e relacionadas aos benefícios
+        % \item Informações relacionadas aos benefícios
+      \end{itemize}
+    \end{itemize}
+  \end{block}    
+  
+  \begin{table}[]
+    \begin{tabular}{|l|l|}
+      \hline
+      {\tiny CAMPO}           & {\tiny DESCRIÇÃO}                                               \\ \hline
+      {\tiny ESPECIE}         & {\tiny Espécie do Benefício}                                    \\ \hline
+      {\tiny DIB}             & {\tiny Data de Início do Benefício}                             \\ \hline
+      {\tiny DDB}             & {\tiny Data de Despacho do Benefício}                           \\ \hline
+      {\tiny MOT\_CESSACAO}   & {\tiny Motivo de Cessação}                                      \\ \hline
+      {\tiny ULT\_COMPET\_MR} & {\tiny Competência de Cálculo da Última Mensalidade Reajustada} \\ \hline
+      {\tiny VL\_MR}          & {\tiny Valor da Última Mensalidade Reajustada}                  \\ \hline
+      {\tiny DT\_NASC}        & {\tiny Data de Nascimento do Titular}                           \\ \hline
+      {\tiny VL\_RMI}         & {\tiny Valor da Renda Mensal Inicial}                           \\ \hline
+      {\tiny CLIENTELA}       & {\tiny Clientela}                                               \\ \hline
+      {\tiny SEXO}            & {\tiny Sexo do Titular}                                         \\ \hline
+      {\tiny SITUACAO}        & {\tiny Situação do Benefício }                                  \\ \hline
+      {\tiny DT\_OBITO}       & {\tiny Data de Óbito}                                           \\ \hline
+      {\tiny TEMP\_CONTRIB}   & {\tiny Tempo de Contribuição (em anos) do Titular}              \\ \hline
+      {\tiny IDADE\_DIB}      & {\tiny Idade na DIB do Titular}                                 \\ \hline
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Pré-processamento dos dados}
+    \begin{itemize}
+      \item Utilização da ferramenta \alert{Pentaho Data Integration} para a organização do banco de dados
+      \item Modelo de \alert{Data Warehouse} empregado na modelagem
+      \item Utilização de um servidor local PostgreSQL 
+    \end{itemize}
+  \end{block}
+  
+  \begin{figure}[h]
+  	\begin{center}
+      \includegraphics [scale=0.34]{./Figures/etl}
+     % \caption {Estimativa de dispositivos conectados à Internet.}
+  		%\label{fig:arq-imuno}
+  	\end{center}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Bases de dados}
   \begin{block}{INSS - Anuário Estatístico da Previdência Social}
     \begin{itemize}
       \item Dados Agregados
